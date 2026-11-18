@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   samba:
-    image: samba:1.0.1
+    image: samba:1.0.2
     environment:
       TZ: 'EST5EDT'
     networks:

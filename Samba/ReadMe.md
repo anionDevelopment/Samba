@@ -4,6 +4,8 @@
 
 Samba docker container
 
+The image is available on Docker Hub as [aniondev/samba](https://hub.docker.com/r/aniondev/samba).
+
 # What is Samba?
 
 Since 1992, Samba has provided secure, stable and fast file and print services
@@ -16,17 +18,17 @@ By default there are no shares configured, additional ones can be added.
 
 ## Hosting a Samba instance
 
-    sudo docker run -it -p 139:139 -p 445:445 -d samba -p
+    sudo docker run -it -p 139:139 -p 445:445 -d aniondev/samba -p
 
 OR set local storage:
 
     sudo docker run -it --name samba -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d samba -p
+                -d aniondev/samba -p
 
 ## Configuration
 
-    sudo docker run -it --rm samba -h
+    sudo docker run -it --rm aniondev/samba -h
     Usage: samba.sh [-opt] [command]
     Options (fields in '[]' are optional, '<>' are required):
         -h          This help
@@ -109,11 +111,11 @@ Any of the commands can be run at creation with `docker run` or later with
 
 ### Setting the Timezone
 
-    sudo docker run -it -e TZ=EST5EDT -p 139:139 -p 445:445 -d samba -p
+    sudo docker run -it -e TZ=EST5EDT -p 139:139 -p 445:445 -d aniondev/samba -p
 
 ### Start an instance creating users and shares:
 
-    sudo docker run -it -p 139:139 -p 445:445 -d samba -p \
+    sudo docker run -it -p 139:139 -p 445:445 -d aniondev/samba -p \
                 -u "example1;badpass" \
                 -u "example2;badpass" \
                 -s "public;/share" \
@@ -134,7 +136,7 @@ Add the `-p` option to the end of your options to the container, or set the
 
     sudo docker run -it --name samba -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d samba -p
+                -d aniondev/samba -p
 
 If changing the permissions of your files is not possible in your setup you
 can instead set the environment variables `USERID` and `GROUPID` to the
@@ -148,7 +150,7 @@ docker_compose.yml files, IE:
 
     sudo docker run -it --name samba -m 512m -p 139:139 -p 445:445 \
                 -v /path/to/directory:/mount \
-                -d samba -p
+                -d aniondev/samba -p
 
 * Attempting to connect with the `smbclient` commandline tool. By default samba
 still tries to use SMB1, which is depriciated and has security issues. This
@@ -159,7 +161,7 @@ any other options you would specify.
 ## Issues
 
 If you have any problems with or questions about this image, please contact me
-through a [GitHub issue](https://github.com/aniondev/Samba/issues).
+through a [GitHub issue](https://github.com/anionDevelopment/Samba/issues).
 ## Development
 
 ### Branching-system
@@ -172,4 +174,4 @@ This repository applies the [CommonProjectStructure](https://projects.aniondev.d
 
 ## License
 
-See [License.txt](https://github.com/aniondev/Samba/blob/main/License.txt) for license-information.
+See [License.txt](https://github.com/anionDevelopment/Samba/blob/main/License.txt) for license-information.
