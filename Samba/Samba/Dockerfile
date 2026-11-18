@@ -1,4 +1,7 @@
-FROM alpine
+ARG image_alpine
+FROM ${image_alpine}
+ARG CodeUnitVersion
+LABEL version=${CodeUnitVersion}
 MAINTAINER David Personette <dperson@gmail.com>
 
 # Install samba
@@ -55,7 +58,7 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '' >>$file && \
     rm -rf /tmp/*
 
-COPY samba.sh /usr/bin/
+COPY ./Samba/samba.sh /usr/bin/
 
 EXPOSE 137/udp 138/udp 139 445
 
