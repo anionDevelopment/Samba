@@ -16,7 +16,7 @@ class Updater:
         ".ScriptCollection/OCIImages/ImageDefinition.csv"), because an alpine-branch only provides the newest build of a
         package: the pinned version must be the one which this branch provides, otherwise "apk add" fails.
         The version consists of the version of samba and the alpine-specific package-release (for example "4.22.10-r0")
-        and not of three numbers, so the echolon can not be applied to it and the provided version is always taken over.
+        and not of three numbers, so the echelon can not be applied to it and the provided version is always taken over.
         That is why it is in the ignored dependencies of the codeunit-file and updated by this script itself."""
         alpine_image: str = self.__tf.tfcps_Tools_General.oci_image_manager.get_registry_address_for_image_with_default_tag(self.__tf.get_repository_folder(), "Alpine")
         output = self.__sc.run_program_argsasarray("docker", ["run", "--rm", alpine_image, "sh", "-c", "apk update >/dev/null && apk policy samba"])
