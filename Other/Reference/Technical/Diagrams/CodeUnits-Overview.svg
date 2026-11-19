@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" data-diagram-type="DESCRIPTION" style="width:537px;height:190px;background:#FFFFFF;" width="537px" height="190px" viewBox="0 0 537 190" zoomAndPan="magnify" preserveAspectRatio="none" contentStyleType="text/css">
+  <defs />
+  <g font-family="sans-serif" lengthAdjust="spacing">
+    <g class="title" data-source-line="2">
+      <text x="185.49" y="22.995" fill="#000" font-size="14" textLength="159.612" font-weight="700" font-family="'DejaVu Sans'">CodeUnits of Samba</text>
+    </g>
+    <g class="entity" data-qualified-name="Samba" id="ent0001" data-source-line="4">
+      <rect x="220.01" y="44.297" width="88.569" height="46.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5" />
+      <rect x="288.579" y="49.297" width="15" height="10" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" />
+      <rect x="286.579" y="51.297" width="4" height="2" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" />
+      <rect x="286.579" y="55.297" width="4" height="2" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" />
+      <text x="235.01" y="77.292" fill="#000" font-size="14" textLength="48.569" font-family="'DejaVu Sans'">Samba</text>
+    </g>
+    <g class="entity" data-qualified-name="SambaNote" id="ent0002" data-source-line="6">
+      <path d="M6,150.597 L6,175.73 A0,0 0 0 0 6,175.73 L522.593,175.73 A0,0 0 0 0 522.593,175.73 L522.593,160.597 L512.593,150.597 L268.3,150.597 L264.3,90.657 L260.3,150.597 L6,150.597 A0,0 0 0 0 6,150.597" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD" />
+      <path d="M512.593,150.597 L512.593,160.597 L522.593,160.597 L512.593,150.597" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD" />
+      <text x="12" y="167.664" fill="#000" font-size="13" textLength="495.593" font-family="'DejaVu Sans'">Samba is a docker-image for running a Samba-server in a docker-container.</text>
+    </g>
+  </g>
+</svg>

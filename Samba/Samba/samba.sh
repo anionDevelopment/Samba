@@ -21,7 +21,7 @@ set -o nounset                              # Treat unset variables as an error
 ### charmap: setup character mapping for file/directory names
 # Arguments:
 #   chars) from:to character mappings separated by ','
-# Return: configured character mapings
+# Return: configured character mappings
 charmap() { local chars="$1" file=/etc/samba/smb.conf
     grep -q catia $file || sed -i '/TCP_NODELAY/a \
 \

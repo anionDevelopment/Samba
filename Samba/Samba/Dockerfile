@@ -1,12 +1,12 @@
 ARG image_alpine
 FROM ${image_alpine}
 ARG CodeUnitVersion
+ARG SambaVersion
 LABEL version=${CodeUnitVersion}
-MAINTAINER David Personette <dperson@gmail.com>
 
 # Install samba
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash samba shadow tini tzdata && \
+    apk --no-cache --no-progress add bash samba=${SambaVersion} shadow tini tzdata && \
     addgroup -S smb && \
     adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser &&\
     file="/etc/samba/smb.conf" && \

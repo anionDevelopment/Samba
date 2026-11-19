@@ -1,0 +1,12 @@
+@startuml CodeUnits-Overview
+skinparam defaultFontName "DejaVu Sans"
+title CodeUnits of Samba
+
+[Samba]
+note as SambaNote
+  Samba is a docker-image for running a Samba-server in a docker-container.
+end note
+Samba .. SambaNote
+
+
+@enduml
